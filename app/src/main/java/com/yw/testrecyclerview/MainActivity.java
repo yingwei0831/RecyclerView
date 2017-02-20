@@ -3,6 +3,8 @@ package com.yw.testrecyclerview;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -69,13 +71,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         recyclerView = (RecyclerView)findViewById(R.id.id_recycler_view);
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_floating_action_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "fab click", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(getApplicationContext(), TestScrollingActivity.class));
+                startActivity(new Intent(getApplicationContext(), TestMDActivity.class));
             }
         });
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("TabOne"));
+        tabLayout.addTab(tabLayout.newTab().setText("TabTwo"));
+        tabLayout.addTab(tabLayout.newTab().setText("TabThree"));
+//        tabLayout.setupWithViewPager(viewPager);
+
     }
 
     @Override

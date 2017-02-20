@@ -20,7 +20,16 @@
         <activity
             android:name=".StaggeredGridLayoutActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".TestKotlinActivity"></activity>
+        <activity android:name=".TestKotlinActivity" />
+        <activity
+            android:name=".TestScrollingActivity"
+            android:label="@string/title_activity_test_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestMDActivity"
+            android:label="@string/title_activity_test_app_bar"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
     </application>
 
 </manifest>
