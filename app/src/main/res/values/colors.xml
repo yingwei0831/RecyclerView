@@ -7,4 +7,5 @@
     <color name="colorBgNormal">#facb34</color>
     <color name="colorBgPressed1">#faab3a</color>
     <color name="colorBgPressed">#ff0000</color>
+    <color name="colorBgGreen">#75d41d</color>
 </resources>

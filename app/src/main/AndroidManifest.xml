@@ -10,7 +10,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize">
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +30,11 @@
         <activity
             android:name=".TestMDActivity"
             android:label="@string/title_activity_test_app_bar"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestSnackActivity"
+            android:label="@string/title_activity_test_snack"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
