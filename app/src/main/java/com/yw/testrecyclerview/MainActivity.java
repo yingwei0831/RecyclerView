@@ -12,6 +12,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         initDatas();
         initViews();
         mAdapter = new RecyclerViewSimpleAdapter(getApplicationContext(), mDates);
@@ -83,12 +85,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("TabOne"));
-        tabLayout.addTab(tabLayout.newTab().setText("TabTwo"));
-        tabLayout.addTab(tabLayout.newTab().setText("TabThree"));
-//        tabLayout.setupWithViewPager(viewPager);
-
+//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+//        tabLayout.addTab(tabLayout.newTab().setText("TabOne"));
+//        tabLayout.addTab(tabLayout.newTab().setText("TabTwo"));
+//        tabLayout.addTab(tabLayout.newTab().setText("TabThree"));
     }
 
     @Override

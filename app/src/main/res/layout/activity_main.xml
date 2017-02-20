@@ -9,33 +9,32 @@
     android:layout_height="match_parent"
     tools:context="com.yw.testrecyclerview.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        >
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/app_bar_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--&gt;-->
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/tool_bar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/tool_bar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways"-->
+            <!--/>-->
 
-            />
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorBgPressed1"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@android:color/holo_green_light"
-            app:tabIndicatorHeight="6dp"
-            app:tabMode="fixed"
-            app:tabSelectedTextColor="@android:color/white"
-            app:tabTextColor="@android:color/black" />
-    </android.support.design.widget.AppBarLayout>
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tab_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/colorBgPressed1"-->
+            <!--app:tabGravity="fill"-->
+            <!--app:tabIndicatorColor="@android:color/holo_green_light"-->
+            <!--app:tabIndicatorHeight="6dp"-->
+            <!--app:tabMode="fixed"-->
+            <!--app:tabSelectedTextColor="@android:color/white"-->
+            <!--app:tabTextColor="@android:color/black" />-->
+    <!--</android.support.design.widget.AppBarLayout>-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_floating_action_button"
