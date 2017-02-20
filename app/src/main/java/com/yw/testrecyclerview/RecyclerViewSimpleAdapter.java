@@ -19,12 +19,12 @@ import java.util.List;
 public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<RecyclerViewSimpleAdapter.MyViewHolder> {
 
     private Context mContext;
-    protected List<String> mDatas;
+    protected List<String> mDates;
     private LayoutInflater mInflater;
 
-    public RecyclerViewSimpleAdapter(Context context, List<String> datas){
+    public RecyclerViewSimpleAdapter(Context context, List<String> dates){
         this.mContext = context;
-        this.mDatas = datas;
+        this.mDates = dates;
         this.mInflater = LayoutInflater.from(context);
     }
 
@@ -47,7 +47,7 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<RecyclerView
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        holder.textView.setText(mDatas.get(position));
+        holder.textView.setText(mDates.get(position));
 
         setUpEvent(holder);
 
@@ -75,16 +75,16 @@ public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<RecyclerView
 
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        return mDates.size();
     }
 
     public void addData(int position){
-        mDatas.add(position, "Insert one");
+        mDates.add(position, "Insert one");
         notifyItemInserted(position);
     }
 
     public void deleteData(int position){
-        mDatas.remove(position);
+        mDates.remove(position);
         notifyItemRemoved(position);
     }
 

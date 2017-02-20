@@ -23,7 +23,7 @@ public class StaggeredAdapter extends RecyclerViewSimpleAdapter {
     public StaggeredAdapter(Context context, List<String> datas){
        super(context, datas);
         mHeights = new ArrayList<>();
-        for(int i = 0; i < mDatas.size(); i++){
+        for(int i = 0; i < mDates.size(); i++){
             mHeights.add((int) (100 + Math.random() * 300));
         }
     }
@@ -33,7 +33,7 @@ public class StaggeredAdapter extends RecyclerViewSimpleAdapter {
         ViewGroup.LayoutParams params = holder.textView.getLayoutParams();
         params.height = mHeights.get(position);
         holder.textView.setLayoutParams(params);
-        holder.textView.setText(mDatas.get(position));
+        holder.textView.setText(mDates.get(position));
 
         setUpEvent(holder);
     }

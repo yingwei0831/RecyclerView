@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
-    private List<String> mDatas;
+    private List<String> mDates;
 
     private RecyclerViewSimpleAdapter mAdapter;
 
@@ -34,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initDatas();
         initViews();
-        mAdapter = new RecyclerViewSimpleAdapter(getApplicationContext(), mDatas);
+        mAdapter = new RecyclerViewSimpleAdapter(getApplicationContext(), mDates);
         recyclerView.setAdapter(mAdapter);
 
         //设置RecyclerView的布局管理
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
         //设置RecyclerView的item间分隔线
-//        recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL_LIST, getResources().getDrawable(R.drawable.divider_hori)));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL_LIST, getResources().getDrawable(R.drawable.divider_hori)));
         //设置Item增加、移除动画
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDatas() {
-        mDatas = new ArrayList<String>();
+        mDates = new ArrayList<>();
         for(int i = 'A'; i <= 'z'; i++){
-            mDatas.add( (char)i + "");
+            mDates.add( (char)i + "");
         }
     }
 
