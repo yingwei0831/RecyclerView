@@ -43,6 +43,16 @@
             android:text="Permission"
             android:textColor="@android:color/black" />
 
+        <TextView
+            android:id="@+id/tv_multiply_permission_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#f7e74938"
+            android:padding="6dp"
+            android:text="MultiplyPermission"
+            android:textColor="@android:color/black" />
+
 
     </LinearLayout>
 
