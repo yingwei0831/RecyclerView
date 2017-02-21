@@ -42,7 +42,6 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
             case R.id.tv_multiply_permission_request:
                 startActivity(new Intent(getApplicationContext(), MultiplePermissionActivity.class)); //TooBar
                 break;
-
         }
     }
 }
