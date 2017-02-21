@@ -85,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "fab click", Toast.LENGTH_SHORT).show();
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-//                startActivity(new Intent(getApplicationContext(), TestScrollingActivity.class));
-//                startActivity(new Intent(getApplicationContext(), TestMDActivity.class)); //TooBar
+                startActivity(new Intent(getApplicationContext(), IndexActivity.class));
             }
         });
 

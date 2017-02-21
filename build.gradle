@@ -4,9 +4,11 @@ buildscript {
 //    ext.kotlin_version = '1.0.4'
     repositories {
         jcenter()
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8' //1——6.0权限适配
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
