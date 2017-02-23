@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#f7e74938"
+            android:background="#f73f41cb"
             android:padding="6dp"
             android:text="Permission"
             android:textColor="@android:color/black" />
@@ -51,6 +51,16 @@
             android:background="#f7e74938"
             android:padding="6dp"
             android:text="MultiplyPermission"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_navigation_drawer_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#f771c60a"
+            android:padding="6dp"
+            android:text="Navigation_Drawer_View"
             android:textColor="@android:color/black" />
 
 

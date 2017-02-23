@@ -23,6 +23,7 @@ public class TestScrollingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         ActionBar ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true); //1.显示toolbar返回箭头
         ab.setHomeButtonEnabled(true); //2.让toolbar返回箭头可以点击

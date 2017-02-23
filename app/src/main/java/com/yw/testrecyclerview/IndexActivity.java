@@ -8,6 +8,7 @@ import android.view.View;
 import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
 import com.yw.testrecyclerview.ui.PermissionActivity;
 import com.yw.testrecyclerview.ui.TestMDActivity;
+import com.yw.testrecyclerview.ui.TestNavigationDrawerActivity;
 import com.yw.testrecyclerview.ui.TestScrollingActivity;
 
 public class IndexActivity extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +26,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_tool_bar).setOnClickListener(this);
         findViewById(R.id.tv_permission_request).setOnClickListener(this);
         findViewById(R.id.tv_multiply_permission_request).setOnClickListener(this);
+        findViewById(R.id.tv_navigation_drawer_request).setOnClickListener(this);
     }
 
     @Override
@@ -37,11 +39,15 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(getApplicationContext(), TestMDActivity.class)); //TooBar
                 break;
             case R.id.tv_permission_request:
-                startActivity(new Intent(getApplicationContext(), PermissionActivity.class)); //TooBar
+                startActivity(new Intent(getApplicationContext(), PermissionActivity.class)); //
                 break;
             case R.id.tv_multiply_permission_request:
-                startActivity(new Intent(getApplicationContext(), MultiplePermissionActivity.class)); //TooBar
+                startActivity(new Intent(getApplicationContext(), MultiplePermissionActivity.class)); //
                 break;
+            case R.id.tv_navigation_drawer_request:
+                startActivity(new Intent(getApplicationContext(), TestNavigationDrawerActivity.class)); //
+                break;
+
         }
     }
 }
