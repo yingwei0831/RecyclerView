@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by jiahe008 on 2016/5/26.
+ * 第一种，下拉刷新和上拉刷新都用SwipeRefreshLayout 自带的进度条
  */
 public class RecyclerViewSimpleAdapter extends RecyclerView.Adapter<RecyclerViewSimpleAdapter.MyViewHolder> {
 
