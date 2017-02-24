@@ -10,6 +10,7 @@ import com.yw.testrecyclerview.ui.PermissionActivity;
 import com.yw.testrecyclerview.ui.TestMDActivity;
 import com.yw.testrecyclerview.ui.TestNavigationDrawerActivity;
 import com.yw.testrecyclerview.ui.TestScrollingActivity;
+import com.yw.testrecyclerview.ui.TestSnackActivity;
 
 public class IndexActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,6 +28,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_permission_request).setOnClickListener(this);
         findViewById(R.id.tv_multiply_permission_request).setOnClickListener(this);
         findViewById(R.id.tv_navigation_drawer_request).setOnClickListener(this);
+        findViewById(R.id.tv_recycler_footer).setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +48,9 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_navigation_drawer_request:
                 startActivity(new Intent(getApplicationContext(), TestNavigationDrawerActivity.class)); //
+                break;
+            case R.id.tv_recycler_footer:
+                startActivity(new Intent(getApplicationContext(), TestSnackActivity.class)); //
                 break;
 
         }

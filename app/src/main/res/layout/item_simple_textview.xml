@@ -12,7 +12,5 @@
         android:gravity="center"
         android:textColor="#ffff0000"
         android:background="@drawable/item_bg"
-        >
-
-    </TextView>
+        />
 </FrameLayout>
