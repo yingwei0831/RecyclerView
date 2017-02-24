@@ -47,7 +47,8 @@
         <activity
             android:name=".ui.TestNavigationDrawerActivity"
             android:label="@string/title_activity_test_navigation_drawer"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.TestRetrofitActivity"></activity>
     </application>
 
 </manifest>

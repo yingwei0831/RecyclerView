@@ -9,6 +9,7 @@ import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
 import com.yw.testrecyclerview.ui.PermissionActivity;
 import com.yw.testrecyclerview.ui.TestMDActivity;
 import com.yw.testrecyclerview.ui.TestNavigationDrawerActivity;
+import com.yw.testrecyclerview.ui.TestRetrofitActivity;
 import com.yw.testrecyclerview.ui.TestScrollingActivity;
 import com.yw.testrecyclerview.ui.TestSnackActivity;
 
@@ -29,6 +30,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_multiply_permission_request).setOnClickListener(this);
         findViewById(R.id.tv_navigation_drawer_request).setOnClickListener(this);
         findViewById(R.id.tv_recycler_footer).setOnClickListener(this);
+        findViewById(R.id.tv_retrofit_testing).setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +53,9 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_recycler_footer:
                 startActivity(new Intent(getApplicationContext(), TestSnackActivity.class)); //
+                break;
+            case R.id.tv_retrofit_testing:
+                startActivity(new Intent(getApplicationContext(), TestRetrofitActivity.class)); //
                 break;
 
         }
