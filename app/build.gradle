@@ -32,4 +32,9 @@ dependencies {
     //3——6.0权限适配
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
     apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.github.limedroid:XDroidMvp:v1.5.0'
 }

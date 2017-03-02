@@ -9,12 +9,22 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_SMS" />
 
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="design_width"
+            android:value="768"/>
+        <meta-data
+            android:name="design_height"
+            android:value="1280"/>
+
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -48,7 +58,11 @@
             android:name=".ui.TestNavigationDrawerActivity"
             android:label="@string/title_activity_test_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.TestRetrofitActivity"></activity>
+        <activity android:name=".ui.TestRetrofitActivity" />
+        <activity
+            android:name=".ui.TestAnimationViewActivity"
+            android:theme="@style/Animation.View" />
+        <activity android:name=".BaseActivity" />
     </application>
 
 </manifest>

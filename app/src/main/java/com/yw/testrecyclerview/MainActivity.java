@@ -161,6 +161,8 @@ public class MainActivity extends AppCompatActivity {
 //        tabLayout.addTab(tabLayout.newTab().setText("TabOne"));
 //        tabLayout.addTab(tabLayout.newTab().setText("TabTwo"));
 //        tabLayout.addTab(tabLayout.newTab().setText("TabThree"));
+
+
     }
 
     @Override

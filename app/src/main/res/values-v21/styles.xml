@@ -7,4 +7,7 @@
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
     </style>
     <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    <style name="Animation.View" parent="AppTheme">
+        <item name="android:windowContentTransitions">true</item>
+    </style>
 </resources>

@@ -1,27 +1,50 @@
 package com.yw.testrecyclerview.ui;
 
+import android.Manifest;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
+import com.yw.testrecyclerview.BaseActivity;
 import com.yw.testrecyclerview.R;
 
-public class TestRetrofitActivity extends AppCompatActivity implements View.OnClickListener {
+import butterknife.BindView;
+import butterknife.OnClick;
+import permissions.dispatcher.NeedsPermission;
+import permissions.dispatcher.RuntimePermissions;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_retrofit);
+public class TestRetrofitActivity extends BaseActivity {
 
-        findViewById(R.id.button_send_request).setOnClickListener(this);
+    private static final String TAG = "TestRetrofitActivity";
+
+//    @BindView(R.id.button_send_request)
+//    Button btnRequest;
+
+    @OnClick({R.id.button_send_request})
+    public void clickEvent(){
+        retrofitMethod();
+    }
+
+    private void retrofitMethod() {
+        Log.e(TAG, "----retrofitMethod----");
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.button_send_request:
+    public void initData(Bundle savedInstanceState) {
 
-                break;
-        }
     }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_test_retrofit;
+    }
+
+    @Override
+    public Object newP() {
+        return null;
+    }
+
 }
