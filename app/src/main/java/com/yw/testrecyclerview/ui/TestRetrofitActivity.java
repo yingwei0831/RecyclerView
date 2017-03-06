@@ -1,8 +1,5 @@
 package com.yw.testrecyclerview.ui;
 
-import android.Manifest;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,26 +7,33 @@ import android.widget.Button;
 
 import com.yw.testrecyclerview.BaseActivity;
 import com.yw.testrecyclerview.R;
+import com.yw.testrecyclerview.retrofitutils.RetrofitUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import permissions.dispatcher.NeedsPermission;
-import permissions.dispatcher.RuntimePermissions;
+
 
 public class TestRetrofitActivity extends BaseActivity {
 
     private static final String TAG = "TestRetrofitActivity";
 
-//    @BindView(R.id.button_send_request)
-//    Button btnRequest;
+    @BindView(R.id.button_send_request)
+    Button buttonSendRequest;
 
     @OnClick({R.id.button_send_request})
-    public void clickEvent(){
-        retrofitMethod();
+    public void clickEvent(View view){
+        switch (view.getId()){
+            case R.id.button_send_request:
+                retrofitMethod();
+                break;
+
+        }
     }
+
 
     private void retrofitMethod() {
         Log.e(TAG, "----retrofitMethod----");
+
     }
 
     @Override
@@ -46,5 +50,6 @@ public class TestRetrofitActivity extends BaseActivity {
     public Object newP() {
         return null;
     }
+
 
 }

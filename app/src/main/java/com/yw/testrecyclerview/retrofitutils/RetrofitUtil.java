@@ -7,6 +7,10 @@ import com.yw.testrecyclerview.retrofitutils.model.response.LineDetailResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
@@ -26,6 +30,20 @@ public class RetrofitUtil {
     }
 
     public void getLineDetail(){
+
+    }
+
+
+    private static Retrofit getRetrofit(String url) {
+
+        return new Retrofit.Builder().baseUrl(url)
+                //增加返回值为String的支持
+                .addConverterFactory(ScalarsConverterFactory.create())
+                //增加返回值为Gson的支持(以实体类返回)
+                .addConverterFactory(GsonConverterFactory.create())
+                //增加返回值为Oservable<T>的支持
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .build();
 
     }
 }

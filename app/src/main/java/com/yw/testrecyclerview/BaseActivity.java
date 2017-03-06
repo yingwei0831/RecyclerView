@@ -19,6 +19,9 @@ import cn.droidlover.xdroidmvp.mvp.XActivity;
 
 /**
  * 测试MVP设计模式
+ * ButterKnife注解
+ * Retrofit网络请求框架
+ * AutoLayout适配
  */
 public abstract class BaseActivity extends XActivity {
 
@@ -28,17 +31,6 @@ public abstract class BaseActivity extends XActivity {
         setContentView(getLayoutId());
         ButterKnife.bind(this);
     }
-
-    /**
-     * 查找View
-     * @param id   控件的id
-     * @param <VT> View类型
-     * @return
-     */
-    protected <VT extends View> VT getViewById(@IdRes int id) {
-        return (VT) findViewById(id);
-    }
-
 
     /**
      * 这里是AutoLayout中的内容

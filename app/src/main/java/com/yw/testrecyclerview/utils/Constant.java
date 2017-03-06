@@ -5,6 +5,6 @@ package com.yw.testrecyclerview.utils;
  */
 public class Constant {
 
-    public static final String BASE_URL = "http://www.cwly1118.com/service.php/";
+    public static final String BASE_URL = "http://www.cwly1118.com/service.php";
 
 }

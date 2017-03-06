@@ -32,9 +32,16 @@ dependencies {
     //3——6.0权限适配
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
     apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    //retrofit网络框架
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.google.code.gson:gson:2.8.0'
-
+    //autoLayout
     compile 'com.zhy:autolayout:1.4.5'
+    //MVP
     compile 'com.github.limedroid:XDroidMvp:v1.5.0'
+    //butterknife注解
+    compile 'com.jakewharton:butterknife:8.5.1'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.squareup.retrofit2:converter-scalars:2.2.0' //与Retrofit搭配使用
+
 }
