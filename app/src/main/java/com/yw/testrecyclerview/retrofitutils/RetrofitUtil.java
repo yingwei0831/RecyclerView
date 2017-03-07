@@ -4,6 +4,9 @@ import com.yw.testrecyclerview.retrofitutils.model.BaseFetch;
 import com.yw.testrecyclerview.retrofitutils.model.BaseResponse;
 import com.yw.testrecyclerview.retrofitutils.model.fetch.LineDetailFetch;
 import com.yw.testrecyclerview.retrofitutils.model.response.LineDetailResponse;
+import com.yw.testrecyclerview.utils.Constant;
+
+import java.io.File;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,24 +22,26 @@ import retrofit2.http.POST;
  */
 public class RetrofitUtil {
 
-    public interface LineAPIService {
+    /**
+     * 1. 创建数据对象，创建请求接口
+     * 2. 创建Retrofit对象
+     * 3. 创建访问API的请求
+     * 4. 发送请求，处理结果
+     */
+//    public interface LineAPIService {
+//
+//        @POST
+//        void getDetail(@Body BaseFetch<LineDetailFetch> fetch, Callback<BaseResponse<LineDetailResponse>> callback);
+//
+//        @POST
+//        Call<BaseResponse<LineDetailResponse>> getDetail();
+//
+//    }
 
-        @POST
-        void getDetail(@Body BaseFetch<LineDetailFetch> fetch, Callback<BaseResponse<LineDetailResponse>> callback);
 
-        @POST
-        Call<BaseResponse<LineDetailResponse>> getDetail();
+    public static Retrofit getRetrofit() {
 
-    }
-
-    public void getLineDetail(){
-
-    }
-
-
-    private static Retrofit getRetrofit(String url) {
-
-        return new Retrofit.Builder().baseUrl(url)
+        return new Retrofit.Builder().baseUrl("http://api.duoshuo.com") //   Constant.BASE_URL
                 //增加返回值为String的支持
                 .addConverterFactory(ScalarsConverterFactory.create())
                 //增加返回值为Gson的支持(以实体类返回)
