@@ -1,10 +1,14 @@
-package com.yw.testrecyclerview.retrofitutils;
+package com.yw.testrecyclerview.retrofitutils.intf;
 
+import com.yw.testrecyclerview.retrofitutils.model.BaseFetch;
+import com.yw.testrecyclerview.retrofitutils.model.BaseResponse;
 import com.yw.testrecyclerview.retrofitutils.model.PhoneResult;
+import com.yw.testrecyclerview.retrofitutils.model.fetch.LineDetailFetch;
 import com.yw.testrecyclerview.retrofitutils.model.response.LineDetailResponse;
 
 import retrofit2.Call;
 import retrofit2.adapter.rxjava.Result;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -16,12 +20,19 @@ import retrofit2.http.Query;
 /**
  * Created by jiahe008_lvlanlan on 2017/3/6.
  */
-public interface ILineDetail<T> {
+public interface IApiService { //<T, Q>
 
 //    //自己的请求接口
-//    @FormUrlEncoded
+//    @FormUrlEncoded 表单数据必须
 //    @POST
 //    Call<LineDetailResponse> lineDetail();
+
+    @POST(".")
+    Call<BaseResponse<LineDetailResponse>> lineDetail(@Body BaseFetch<LineDetailFetch> lineDetailFetch);
+
+
+//    @POST
+//    Call<BaseResponse<Q>> fetch(@Body BaseFetch<T> fetch);
 
     //直接请求类型：
     //1.直接请求
@@ -46,7 +57,9 @@ public interface ILineDetail<T> {
     Call<PhoneResult> getResult(@Header("apikey") String apikey, @Query("phone") String phone);
 
     //Demo中的请求接口，添加泛型返回类数据类型
-    @GET("/threads/counts.json")
-    Call<T> getCommit(@Query("short_name") String shortName, @Query("threads") String threads);
+//    @GET("/threads/counts.json")
+//    Call<Q> getCommit(@Query("short_name") String shortName, @Query("threads") String threads);
+
+
 
 }

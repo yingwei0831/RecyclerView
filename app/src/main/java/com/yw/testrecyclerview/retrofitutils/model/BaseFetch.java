@@ -8,6 +8,8 @@ import com.google.gson.JsonElement;
  */
 public class BaseFetch<T> {
 
+//    {"head":{"code":"Publics_show"},"field":{"id":"589","memberid":"73"}}
+
     private HeadBean head;
 
     public HeadBean getHead() {
@@ -31,10 +33,10 @@ public class BaseFetch<T> {
         public void setCode(String code) {
             this.code = code;
         }
-    }
 
-    public void setHeadCode(String code){
-        head.code = code;
+        public HeadBean(String code) {
+            this.code = code;
+        }
     }
 
     private T field;
@@ -47,15 +49,9 @@ public class BaseFetch<T> {
         this.field = field;
     }
 
+    public BaseFetch(HeadBean head, T field) {
+        this.head = head;
+        this.field = field;
+    }
 //    {"head":{"code":"Publics_show"},"field":{"id":"589","memberid":"73"}}
-
-//    protected String code;
-
-//    public String getCode() {
-//        return code;
-//    }
-
-//    public void setCode(String code) {
-//        this.code = code;
-//    }
 }

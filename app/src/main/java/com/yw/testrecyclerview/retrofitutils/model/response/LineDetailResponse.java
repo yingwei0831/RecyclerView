@@ -301,5 +301,45 @@ public class LineDetailResponse {
         public void setJieshao(String jieshao) {
             this.jieshao = jieshao;
         }
+
+        @Override
+        public String toString() {
+            return "XcmsBean{" +
+                    "day='" + day + '\'' +
+                    ", title='" + title + '\'' +
+                    ", jieshao='" + jieshao + '\'' +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "LineDetailResponse{" +
+                "finaldestid='" + finaldestid + '\'' +
+                ", id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", litpic='" + litpic + '\'' +
+                ", price='" + price + '\'' +
+                ", beizu='" + beizu + '\'' +
+                ", feeinclude='" + feeinclude + '\'' +
+                ", features='" + features + '\'' +
+                ", transport='" + transport + '\'' +
+                ", xlxq='" + xlxq + '\'' +
+                ", fybubh='" + fybubh + '\'' +
+                ", supplierlist='" + supplierlist + '\'' +
+                ", biaozhun='" + biaozhun + '\'' +
+                ", needjifen='" + needjifen + '\'' +
+                ", comment='" + comment + '\'' +
+                ", typeid=" + typeid +
+                ", plcount='" + plcount + '\'' +
+                ", group='" + group + '\'' +
+                ", im='" + im + '\'' +
+                ", sjmc='" + sjmc + '\'' +
+                ", tel='" + tel + '\'' +
+                ", type='" + type + '\'' +
+                ", iscollect=" + iscollect +
+                ", piclist=" + piclist +
+                ", xcms=" + xcms +
+                '}';
     }
 }

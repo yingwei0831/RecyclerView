@@ -60,5 +60,22 @@ public class BaseResponse<Q> {
         public void setRes_arg(String res_arg) {
             this.res_arg = res_arg;
         }
+
+        @Override
+        public String toString() {
+            return "HeadBean{" +
+                    "res_code='" + res_code + '\'' +
+                    ", res_msg='" + res_msg + '\'' +
+                    ", res_arg='" + res_arg + '\'' +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "BaseResponse{" +
+                "head=" + head +
+                ", body=" + body +
+                '}';
     }
 }

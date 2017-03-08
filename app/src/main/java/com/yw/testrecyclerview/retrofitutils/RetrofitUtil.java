@@ -8,6 +8,7 @@ import com.yw.testrecyclerview.utils.Constant;
 
 import java.io.File;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -46,9 +47,26 @@ public class RetrofitUtil {
                 .addConverterFactory(ScalarsConverterFactory.create())
                 //增加返回值为Gson的支持(以实体类返回)
                 .addConverterFactory(GsonConverterFactory.create())
-                //增加返回值为Oservable<T>的支持
+                //增加返回值为Observable<T>的支持
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
+    }
+
+    private static Retrofit instance;
+
+
+    public static Retrofit getInstance(){
+        if (instance == null){
+            OkHttpClient client = new OkHttpClient();
+            instance = new Retrofit.Builder()
+                    .baseUrl(Constant.BASE_URL + "/")
+                    .addConverterFactory(GsonConverterFactory.create()) //Gson类
+                    .addConverterFactory(ScalarsConverterFactory.create()) //String
+                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) //Observable<T>
+                    .client(client)
+                    .build();
+        }
+        return instance;
     }
 }

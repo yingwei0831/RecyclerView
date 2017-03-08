@@ -35,6 +35,7 @@ dependencies {
     //retrofit网络框架
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
     //autoLayout
     compile 'com.zhy:autolayout:1.4.5'
     //MVP
@@ -42,6 +43,8 @@ dependencies {
     //butterknife注解
     compile 'com.jakewharton:butterknife:8.5.1'
     apt 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile 'com.squareup.retrofit2:converter-scalars:2.2.0' //与Retrofit搭配使用
-
+    //与Retrofit搭配使用
+    compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
+    //okhttp日志管理
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
 }

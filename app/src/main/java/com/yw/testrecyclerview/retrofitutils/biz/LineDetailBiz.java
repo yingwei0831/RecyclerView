@@ -2,7 +2,7 @@ package com.yw.testrecyclerview.retrofitutils.biz;
 
 import android.util.Log;
 
-import com.yw.testrecyclerview.retrofitutils.ILineDetail;
+import com.yw.testrecyclerview.retrofitutils.intf.IApiService;
 import com.yw.testrecyclerview.retrofitutils.model.PhoneResult;
 import com.yw.testrecyclerview.utils.Constant;
 
@@ -26,7 +26,7 @@ public class LineDetailBiz {
                 .baseUrl(Constant.BASE_URL_DEMO) //主机地址
                 .build();
         // 2.创建访问API的请求
-        ILineDetail service = retrofit.create(ILineDetail.class);
+        IApiService service = retrofit.create(IApiService.class);
         Call<PhoneResult> call = service.getResult(Constant.API_KEY_DEMO, phone);
         // 3.发送请求
         call.enqueue(new Callback<PhoneResult>() {

@@ -19,6 +19,11 @@ public class LineDetailFetch {
     private String id;
     private String memberid;
 
+    public LineDetailFetch(String id, String memberid) {
+        this.id = id;
+        this.memberid = memberid;
+    }
+
     public String getId() {
         return id;
     }
@@ -37,4 +42,11 @@ public class LineDetailFetch {
 
 //    {"head":{"code":"Publics_show"},"field":{"id":"589","memberid":"73"}}
 
+    @Override
+    public String toString() {
+        return "LineDetailFetch{" +
+                "id='" + id + '\'' +
+                ", memberid='" + memberid + '\'' +
+                '}';
+    }
 }
