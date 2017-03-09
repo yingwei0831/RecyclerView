@@ -1,6 +1,6 @@
-package com.yw.testrecyclerview.mvppattern.model.biz;
+package com.yw.testrecyclerview.mvp.model.biz;
 
-import com.yw.testrecyclerview.mvppattern.model.bean.UserBean;
+import com.yw.testrecyclerview.mvp.model.bean.UserBean;
 
 /**
  * Created by jiahe008_lvlanlan on 2017/3/9.

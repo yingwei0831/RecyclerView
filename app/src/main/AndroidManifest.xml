@@ -62,7 +62,7 @@
             android:name=".ui.TestAnimationViewActivity"
             android:theme="@style/Animation.View" />
         <activity android:name=".BaseActivity"/>
-        <activity android:name=".mvppattern.DesignPatternActivity"/>
+        <activity android:name=".mvp.DesignPatternActivity"/>
     </application>
 
 </manifest>

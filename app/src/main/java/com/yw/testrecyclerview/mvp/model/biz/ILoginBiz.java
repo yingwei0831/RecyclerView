@@ -1,4 +1,4 @@
-package com.yw.testrecyclerview.mvppattern.model.biz;
+package com.yw.testrecyclerview.mvp.model.biz;
 
 /**
  * Created by jiahe008_lvlanlan on 2017/3/9.

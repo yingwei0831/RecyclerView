@@ -1,6 +1,6 @@
-package com.yw.testrecyclerview.mvppattern.view;
+package com.yw.testrecyclerview.mvp.view;
 
-import com.yw.testrecyclerview.mvppattern.model.bean.UserBean;
+import com.yw.testrecyclerview.mvp.model.bean.UserBean;
 
 /**
  * Created by jiahe008_lvlanlan on 2017/3/9.
@@ -20,6 +20,7 @@ public interface IUserLoginView {
 
     public void toMainActivity(UserBean user);
     public void showFailedError();
+
 
 
     public void clearUserName();

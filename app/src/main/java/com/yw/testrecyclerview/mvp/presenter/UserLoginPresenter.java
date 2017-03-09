@@ -1,12 +1,13 @@
-package com.yw.testrecyclerview.mvppattern.presenter;
+package com.yw.testrecyclerview.mvp.presenter;
 
 import android.os.Handler;
 
-import com.yw.testrecyclerview.mvppattern.model.bean.UserBean;
-import com.yw.testrecyclerview.mvppattern.model.biz.ILoginBiz;
-import com.yw.testrecyclerview.mvppattern.model.biz.OnLoginListener;
-import com.yw.testrecyclerview.mvppattern.model.biz.impl.LoginBiz;
-import com.yw.testrecyclerview.mvppattern.view.IUserLoginView;
+import com.yw.testrecyclerview.mvp.model.bean.UserBean;
+import com.yw.testrecyclerview.mvp.model.biz.ILoginBiz;
+import com.yw.testrecyclerview.mvp.model.biz.OnLoginListener;
+import com.yw.testrecyclerview.mvp.model.biz.impl.LoginBiz;
+import com.yw.testrecyclerview.mvp.view.IUserLoginView;
+
 
 /**
  * Created by jiahe008_lvlanlan on 2017/3/9.
@@ -23,7 +24,7 @@ public class UserLoginPresenter implements OnLoginListener {
 
     public UserLoginPresenter(IUserLoginView userLoginView) {
         this.userLoginView = userLoginView;
-        userBiz = new LoginBiz();
+        this.userBiz = new LoginBiz();
     }
 
     public void login(){

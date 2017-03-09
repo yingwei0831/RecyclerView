@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yw.testrecyclerview.mvppattern.DesignPatternActivity;
+import com.yw.testrecyclerview.mvp.DesignPatternActivity;
 import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
 import com.yw.testrecyclerview.ui.PermissionActivity;
 import com.yw.testrecyclerview.ui.TestAnimationViewActivity;

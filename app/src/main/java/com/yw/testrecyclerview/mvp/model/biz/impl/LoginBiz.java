@@ -1,8 +1,8 @@
-package com.yw.testrecyclerview.mvppattern.model.biz.impl;
+package com.yw.testrecyclerview.mvp.model.biz.impl;
 
-import com.yw.testrecyclerview.mvppattern.model.bean.UserBean;
-import com.yw.testrecyclerview.mvppattern.model.biz.ILoginBiz;
-import com.yw.testrecyclerview.mvppattern.model.biz.OnLoginListener;
+import com.yw.testrecyclerview.mvp.model.bean.UserBean;
+import com.yw.testrecyclerview.mvp.model.biz.ILoginBiz;
+import com.yw.testrecyclerview.mvp.model.biz.OnLoginListener;
 
 /**
  * Created by jiahe008_lvlanlan on 2017/3/9.

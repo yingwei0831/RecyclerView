@@ -1,4 +1,4 @@
-package com.yw.testrecyclerview.mvppattern;
+package com.yw.testrecyclerview.mvp;
 
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
@@ -8,9 +8,9 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.yw.testrecyclerview.R;
-import com.yw.testrecyclerview.mvppattern.model.bean.UserBean;
-import com.yw.testrecyclerview.mvppattern.presenter.UserLoginPresenter;
-import com.yw.testrecyclerview.mvppattern.view.IUserLoginView;
+import com.yw.testrecyclerview.mvp.model.bean.UserBean;
+import com.yw.testrecyclerview.mvp.presenter.UserLoginPresenter;
+import com.yw.testrecyclerview.mvp.view.IUserLoginView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +20,7 @@ import butterknife.OnClick;
  * MVP设计模式
  * ButterKnife注解
  */
-public class DesignPatternActivity extends AppCompatActivity implements IUserLoginView{
+public class DesignPatternActivity extends AppCompatActivity implements IUserLoginView {
 
 
     @BindView(R.id.acet_name)
