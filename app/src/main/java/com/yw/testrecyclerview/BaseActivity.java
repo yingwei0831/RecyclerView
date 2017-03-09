@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import cn.droidlover.xdroidmvp.mvp.XActivity;
 
 /**
- * 测试MVP设计模式
+ * 测试MVP设计模式  XActivity
  * ButterKnife注解
  * Retrofit网络请求框架
  * AutoLayout适配

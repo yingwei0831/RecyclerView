@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.yw.testrecyclerview.mvppattern.DesignPatternActivity;
 import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
 import com.yw.testrecyclerview.ui.PermissionActivity;
 import com.yw.testrecyclerview.ui.TestAnimationViewActivity;
@@ -38,6 +39,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_navigation_drawer_request).setOnClickListener(this);
         findViewById(R.id.tv_recycler_footer).setOnClickListener(this);
         findViewById(R.id.tv_retrofit_testing).setOnClickListener(this);
+        findViewById(R.id.tv_design_pattern).setOnClickListener(this);
         tvShareElement = (TextView) findViewById(R.id.tv_animation_view); //共享View
         tvShareElement.setOnClickListener(this);
     }
@@ -68,6 +70,9 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_animation_view:
                 animToActivity();
+                break;
+            case R.id.tv_design_pattern:
+                startActivity(new Intent(getApplicationContext(), DesignPatternActivity.class));
                 break;
 
         }

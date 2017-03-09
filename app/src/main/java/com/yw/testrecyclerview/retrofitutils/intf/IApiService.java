@@ -20,14 +20,15 @@ import retrofit2.http.Query;
 /**
  * Created by jiahe008_lvlanlan on 2017/3/6.
  */
-public interface IApiService { //<T, Q>
+public interface IApiService{ //<T, Q>
 
 //    //自己的请求接口
 //    @FormUrlEncoded 表单数据必须
 //    @POST
 //    Call<LineDetailResponse> lineDetail();
 
-    @POST(".")
+    //@Headers({"Content-type:application/json;charset=UTF-8"}) @Header("Content-type:application/json;charset=UTF-8")
+    @POST(".") //如果请求地址与baseUrl相同，则这样写
     Call<BaseResponse<LineDetailResponse>> lineDetail(@Body BaseFetch<LineDetailFetch> lineDetailFetch);
 
 

@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.yw.testrecyclerview.BaseActivity;
 import com.yw.testrecyclerview.R;
 import com.yw.testrecyclerview.retrofitutils.RetrofitUtil;
+import com.yw.testrecyclerview.retrofitutils.RetrofitWrapper;
 import com.yw.testrecyclerview.retrofitutils.intf.IApiService;
 import com.yw.testrecyclerview.retrofitutils.model.BaseFetch;
 import com.yw.testrecyclerview.retrofitutils.model.BaseResponse;
@@ -44,11 +45,13 @@ public class TestRetrofitActivity extends BaseActivity {
 
     private void retrofitMethod() {
         Log.e(TAG, "----retrofitMethod----");
-        IApiService apiService = RetrofitUtil.getInstance().create(IApiService.class);
         BaseFetch<LineDetailFetch> fetchModel = new BaseFetch<>(
                 new BaseFetch.HeadBean("Publics_show"),
                 new LineDetailFetch("589", "73"));
-        apiService.lineDetail(fetchModel).enqueue(new Callback<BaseResponse<LineDetailResponse>>() {
+
+        IApiService service = RetrofitWrapper.getInstance().create(IApiService.class);
+        Call<BaseResponse<LineDetailResponse>> result = service.lineDetail(fetchModel);
+        result.enqueue(new Callback<BaseResponse<LineDetailResponse>>() {
             @Override
             public void onResponse(Call<BaseResponse<LineDetailResponse>> call, Response<BaseResponse<LineDetailResponse>> response) {
                 Log.e(TAG, "code = " + response.code());
@@ -72,6 +75,32 @@ public class TestRetrofitActivity extends BaseActivity {
                 Toast.makeText(getApplicationContext(), "出错", Toast.LENGTH_SHORT).show();
             }
         });
+
+//        IApiService apiService = RetrofitUtil.getInstance().create(IApiService.class);
+//        apiService.lineDetail(fetchModel).enqueue(new Callback<BaseResponse<LineDetailResponse>>() {
+//            @Override
+//            public void onResponse(Call<BaseResponse<LineDetailResponse>> call, Response<BaseResponse<LineDetailResponse>> response) {
+//                Log.e(TAG, "code = " + response.code());
+//                if (response.isSuccessful()) {
+//                    Toast.makeText(getApplicationContext(), "成功", Toast.LENGTH_SHORT).show();
+//                    BaseResponse<LineDetailResponse> body = response.body();
+//                    Log.e(TAG, "result = " + body.toString());
+//                }else{
+//                    Toast.makeText(getApplicationContext(), "失败", Toast.LENGTH_SHORT).show();
+//                    try {
+//                        Log.e(TAG, "response error = " + response.errorBody().string());
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<BaseResponse<LineDetailResponse>> call, Throwable t) {
+//                Log.e(TAG, "onFailure");
+//                Toast.makeText(getApplicationContext(), "出错", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     @Override

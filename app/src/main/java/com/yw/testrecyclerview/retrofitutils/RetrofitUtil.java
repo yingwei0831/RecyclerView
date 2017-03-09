@@ -7,6 +7,7 @@ import com.yw.testrecyclerview.retrofitutils.model.response.LineDetailResponse;
 import com.yw.testrecyclerview.utils.Constant;
 
 import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -59,8 +60,11 @@ public class RetrofitUtil {
     public static Retrofit getInstance(){
         if (instance == null){
             OkHttpClient client = new OkHttpClient();
+            client.newBuilder().connectTimeout(15, TimeUnit.SECONDS)
+            .retryOnConnectionFailure(false)
+            .build();
             instance = new Retrofit.Builder()
-                    .baseUrl(Constant.BASE_URL + "/")
+                    .baseUrl(Constant.BASE_URL) //需要注意的是baseUrl必须以”/”结尾
                     .addConverterFactory(GsonConverterFactory.create()) //Gson类
                     .addConverterFactory(ScalarsConverterFactory.create()) //String
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) //Observable<T>
