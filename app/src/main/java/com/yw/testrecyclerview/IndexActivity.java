@@ -18,6 +18,7 @@ import com.yw.testrecyclerview.ui.TestNavigationDrawerActivity;
 import com.yw.testrecyclerview.ui.TestRetrofitActivity;
 import com.yw.testrecyclerview.ui.TestScrollingActivity;
 import com.yw.testrecyclerview.ui.TestSnackActivity;
+import com.yw.testrecyclerview.xdroidmvp.TestXdroidMVPActivity;
 
 public class IndexActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,6 +41,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_recycler_footer).setOnClickListener(this);
         findViewById(R.id.tv_retrofit_testing).setOnClickListener(this);
         findViewById(R.id.tv_design_pattern).setOnClickListener(this);
+        findViewById(R.id.tv_design_pattern_xdroid).setOnClickListener(this);
         tvShareElement = (TextView) findViewById(R.id.tv_animation_view); //共享View
         tvShareElement.setOnClickListener(this);
     }
@@ -73,6 +75,9 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_design_pattern:
                 startActivity(new Intent(getApplicationContext(), DesignPatternActivity.class));
+                break;
+            case R.id.tv_design_pattern_xdroid:
+                startActivity(new Intent(getApplicationContext(), TestXdroidMVPActivity.class));
                 break;
 
         }

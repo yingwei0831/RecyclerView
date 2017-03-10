@@ -33,7 +33,7 @@
             android:text="ToolBar"
             android:textColor="@android:color/black" />
 
-         <TextView
+        <TextView
             android:id="@+id/tv_permission_request"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,8 +91,8 @@
             android:background="#53e0d7"
             android:padding="6dp"
             android:text="AnimationView"
-            android:textColor="@android:color/black"
-            />
+            android:textColor="@android:color/black" />
+
         <TextView
             android:id="@+id/tv_design_pattern"
             android:layout_width="match_parent"
@@ -100,9 +100,18 @@
             android:layout_marginTop="10dp"
             android:background="#8e43d5"
             android:padding="6dp"
-            android:text="DesignPattern"
-            android:textColor="@android:color/black"
-            />
+            android:text="DesignPattern_MVP"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_design_pattern_xdroid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#e3ba26"
+            android:padding="6dp"
+            android:text="DesignPattern_XdroidMVP"
+            android:textColor="@android:color/black" />
 
 
     </LinearLayout>

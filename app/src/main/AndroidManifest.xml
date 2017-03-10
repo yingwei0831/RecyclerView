@@ -61,8 +61,10 @@
         <activity
             android:name=".ui.TestAnimationViewActivity"
             android:theme="@style/Animation.View" />
-        <activity android:name=".BaseActivity"/>
-        <activity android:name=".mvp.DesignPatternActivity"/>
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".mvp.DesignPatternActivity" />
+        <activity android:name=".xdroidmvp.TestXdroidMVPActivity" />
+        <activity android:name=".ui.IntentServiceActivity"></activity>
     </application>
 
 </manifest>

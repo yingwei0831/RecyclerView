@@ -58,4 +58,5 @@ public abstract class BaseActivity extends XActivity {
 
         return super.onCreateView(name, context, attrs);
     }
+    //end autoLayout
 }

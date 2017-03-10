@@ -17,12 +17,12 @@ public class LoginBiz implements ILoginBiz {
             public void run() {
                 super.run();
                 try {
-                    sleep(2000);
+                    sleep(2500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 //模拟登录成功
-                if ("123456".equals(username) && "123456".equals(password)){
+                if ("admin".equals(username) && "123456".equals(password)){
                     UserBean user = new UserBean();
                     user.setName(username);
                     user.setPassword(password);
