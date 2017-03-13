@@ -15,14 +15,20 @@ public class Observer1 implements Observer {
     private static final String TAG = "Observer1";
 
     public void registerSubject(Observable observable){
-        //
-
+        observable.addObserver(this);
     }
 
     @Override
     public void update(Observable observable, Object o) {
+        Log.e(TAG, "update");
+        if (observable instanceof SubjectFor3D){
+            SubjectFor3D subjectFor3D = (SubjectFor3D) observable;
+            Log.e(TAG, "subjectFor3D's msg -- >" + subjectFor3D.getMsg());
+        }else if (observable instanceof SubjectForSSQ){
+            SubjectForSSQ subjectForSSQ = (SubjectForSSQ) observable;
+            Log.e(TAG, "subjectForSSQ's msg -- >" + subjectForSSQ.getMsg());
+        }
 
-//        Log.e(TAG, "observer1 得到 3D 号码  -->" + msg + ", 我要记下来。");
     }
 
 

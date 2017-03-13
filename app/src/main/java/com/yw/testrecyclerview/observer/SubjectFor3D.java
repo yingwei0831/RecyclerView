@@ -10,9 +10,7 @@ import java.util.Observer;
  *
  * 3D彩票服务号主题
  */
-public class ObjectFor3D extends Observable {
-
-    private List<Observer> observers = new ArrayList<>();
+public class SubjectFor3D extends Observable {
 
     /**
      * 3D彩票的号码
