@@ -65,7 +65,7 @@
         <activity android:name=".mvp.DesignPatternActivity" />
         <activity android:name=".xdroidmvp.TestXdroidMVPActivity" />
         <activity android:name=".ui.IntentServiceActivity" />
-        <activity android:name=".ui.ObserverActivity"></activity>
+        <activity android:name=".ui.ObserverActivity" android:launchMode="singleTask"/>
     </application>
 
 </manifest>
