@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.yw.testrecyclerview.mvp.DesignPatternActivity;
 import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
+import com.yw.testrecyclerview.ui.ObserverActivity;
 import com.yw.testrecyclerview.ui.PermissionActivity;
 import com.yw.testrecyclerview.ui.TestAnimationViewActivity;
 import com.yw.testrecyclerview.ui.TestMDActivity;
@@ -42,6 +43,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_retrofit_testing).setOnClickListener(this);
         findViewById(R.id.tv_design_pattern).setOnClickListener(this);
         findViewById(R.id.tv_design_pattern_xdroid).setOnClickListener(this);
+        findViewById(R.id.tv_design_pattern_observer).setOnClickListener(this);
         tvShareElement = (TextView) findViewById(R.id.tv_animation_view); //共享View
         tvShareElement.setOnClickListener(this);
     }
@@ -78,6 +80,9 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_design_pattern_xdroid:
                 startActivity(new Intent(getApplicationContext(), TestXdroidMVPActivity.class));
+                break;
+            case R.id.tv_design_pattern_observer:
+                startActivity(new Intent(getApplicationContext(), ObserverActivity.class));
                 break;
 
         }

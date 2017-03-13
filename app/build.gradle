@@ -47,4 +47,6 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-scalars:2.2.0'
     //okhttp日志管理
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    // 日志打印工具类
+    compile 'com.orhanobut:logger:1.15'
 }
