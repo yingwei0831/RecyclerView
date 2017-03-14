@@ -123,6 +123,15 @@
             android:text="DesignPattern_Observer"
             android:textColor="@android:color/black" />
 
+        <TextView
+            android:id="@+id/tv_design_pattern_observer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#d326e3"
+            android:padding="6dp"
+            android:text="DesignPattern_Observer_2"
+            android:textColor="@android:color/black" />
 
 
     </LinearLayout>

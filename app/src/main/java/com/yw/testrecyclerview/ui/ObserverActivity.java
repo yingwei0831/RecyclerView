@@ -2,6 +2,7 @@ package com.yw.testrecyclerview.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.yw.testrecyclerview.BaseActivity;
@@ -16,6 +17,8 @@ import com.yw.testrecyclerview.observer.SubjectForSSQ;
  * 系统已经存在一个实例，系统就会将请求发送到这个实例上，但这个时候----------系统就不会再调用onCreate方法，而是调用onNewIntent方法
  */
 public class ObserverActivity extends BaseActivity {
+
+    private static final String TAG = "ObserverActivity";
 
     public void testObserver(View view){
         SubjectFor3D subjectFor3D = new SubjectFor3D();
@@ -32,7 +35,7 @@ public class ObserverActivity extends BaseActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-
+        Log.e(TAG, "onNewIntent");
     }
 
     @Override
