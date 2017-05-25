@@ -59,17 +59,21 @@ public class RetrofitUtil {
 
     public static Retrofit getInstance(){
         if (instance == null){
-            OkHttpClient client = new OkHttpClient();
-            client.newBuilder().connectTimeout(15, TimeUnit.SECONDS)
-            .retryOnConnectionFailure(false)
-            .build();
-            instance = new Retrofit.Builder()
-                    .baseUrl(Constant.BASE_URL) //需要注意的是baseUrl必须以”/”结尾
-                    .addConverterFactory(GsonConverterFactory.create()) //Gson类
-                    .addConverterFactory(ScalarsConverterFactory.create()) //String
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) //Observable<T>
-                    .client(client)
-                    .build();
+            synchronized (RetrofitUtil.class) {
+                if (instance == null) {
+                    OkHttpClient client = new OkHttpClient();
+                    client.newBuilder().connectTimeout(15, TimeUnit.SECONDS)
+                            .retryOnConnectionFailure(false)
+                            .build();
+                    instance = new Retrofit.Builder()
+                            .baseUrl(Constant.BASE_URL) //需要注意的是baseUrl必须以”/”结尾
+                            .addConverterFactory(GsonConverterFactory.create()) //Gson类
+                            .addConverterFactory(ScalarsConverterFactory.create()) //String
+                            .addCallAdapterFactory(RxJavaCallAdapterFactory.create()) //Observable<T>
+                            .client(client)
+                            .build();
+                }
+            }
         }
         return instance;
     }

@@ -2,7 +2,7 @@ package com.yw.testrecyclerview.mvp.model.biz.impl;
 
 import com.yw.testrecyclerview.mvp.model.bean.UserBean;
 import com.yw.testrecyclerview.mvp.model.biz.ILoginBiz;
-import com.yw.testrecyclerview.mvp.model.biz.OnLoginListener;
+import com.yw.testrecyclerview.mvp.model.biz.OnCallbackListener;
 
 /**
  * Created by jiahe008_lvlanlan on 2017/3/9.
@@ -10,7 +10,7 @@ import com.yw.testrecyclerview.mvp.model.biz.OnLoginListener;
 public class LoginBiz implements ILoginBiz {
 
     @Override
-    public void login(final String username, final String password, final OnLoginListener loginListener) {
+    public void login(final String username, final String password, final OnCallbackListener loginListener) {
         //模拟网络请求
         new Thread(){
             @Override

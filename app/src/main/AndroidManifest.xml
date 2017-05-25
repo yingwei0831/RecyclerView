@@ -10,6 +10,10 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -68,7 +72,9 @@
         <activity
             android:name=".ui.ObserverActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".ui.Observer2Activity"></activity>
+        <activity android:name=".ui.Observer2Activity" />
+        <activity android:name=".ui.MediaUtilActivity" />
+        <activity android:name=".ui.AudioChatActivity"></activity>
     </application>
 
 </manifest>

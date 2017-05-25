@@ -1,5 +1,7 @@
 package com.yw.testrecyclerview;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
@@ -17,6 +19,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,6 +32,8 @@ import java.util.List;
 import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
@@ -85,6 +90,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "longClick " + position, Toast.LENGTH_SHORT).show();
             }
         });
+
+        ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        int memory = am.getMemoryClass();
+        int largeM = am.getLargeMemoryClass();
+        Log.e(TAG, "memory: " + memory +", largeM: " + largeM);
+
+        Runtime.getRuntime().freeMemory();
+        Runtime.getRuntime().totalMemory();
+        Runtime.getRuntime().maxMemory();
     }
 
     private void initDatas() {

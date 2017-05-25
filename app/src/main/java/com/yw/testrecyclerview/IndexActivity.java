@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.yw.testrecyclerview.mvp.DesignPatternActivity;
+import com.yw.testrecyclerview.ui.AudioChatActivity;
+import com.yw.testrecyclerview.ui.MediaUtilActivity;
 import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
 import com.yw.testrecyclerview.ui.Observer2Activity;
 import com.yw.testrecyclerview.ui.ObserverActivity;
@@ -46,6 +48,8 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_design_pattern_xdroid).setOnClickListener(this);
         findViewById(R.id.tv_design_pattern_observer).setOnClickListener(this);
         findViewById(R.id.tv_design_pattern_observer2).setOnClickListener(this);
+        findViewById(R.id.tv_wechat_audio).setOnClickListener(this);
+        findViewById(R.id.tv_media_util).setOnClickListener(this);
         tvShareElement = (TextView) findViewById(R.id.tv_animation_view); //共享View
         tvShareElement.setOnClickListener(this);
     }
@@ -89,7 +93,12 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
             case R.id.tv_design_pattern_observer2:
                 startActivity(new Intent(getApplicationContext(), Observer2Activity.class));
                 break;
-
+            case R.id.tv_wechat_audio:
+                startActivity(new Intent(getApplicationContext(), AudioChatActivity.class));
+                break;
+            case R.id.tv_media_util:
+                startActivity(new Intent(getApplicationContext(), MediaUtilActivity.class));
+                break;
         }
     }
 
