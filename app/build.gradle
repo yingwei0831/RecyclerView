@@ -51,4 +51,6 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     // 日志打印工具类
     compile 'com.orhanobut:logger:1.15'
+    //加载动画
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
 }

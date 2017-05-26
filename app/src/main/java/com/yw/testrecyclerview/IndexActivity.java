@@ -22,6 +22,7 @@ import com.yw.testrecyclerview.ui.TestNavigationDrawerActivity;
 import com.yw.testrecyclerview.ui.TestRetrofitActivity;
 import com.yw.testrecyclerview.ui.TestScrollingActivity;
 import com.yw.testrecyclerview.ui.TestSnackActivity;
+import com.yw.testrecyclerview.ui.VideoPlayActivity;
 import com.yw.testrecyclerview.xdroidmvp.TestXdroidMVPActivity;
 
 public class IndexActivity extends AppCompatActivity implements View.OnClickListener {
@@ -49,6 +50,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_design_pattern_observer).setOnClickListener(this);
         findViewById(R.id.tv_design_pattern_observer2).setOnClickListener(this);
         findViewById(R.id.tv_wechat_audio).setOnClickListener(this);
+        findViewById(R.id.tv_wechat_video).setOnClickListener(this);
         findViewById(R.id.tv_media_util).setOnClickListener(this);
         tvShareElement = (TextView) findViewById(R.id.tv_animation_view); //共享View
         tvShareElement.setOnClickListener(this);
@@ -94,8 +96,12 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(getApplicationContext(), Observer2Activity.class));
                 break;
             case R.id.tv_wechat_audio:
-                startActivity(new Intent(getApplicationContext(), AudioChatActivity.class));
+                startActivity(new Intent(getApplicationContext(), AudioChatActivity.class)); //仿微信音频录制、播放
                 break;
+            case R.id.tv_wechat_video:
+                startActivity(new Intent(getApplicationContext(), VideoPlayActivity.class)); //视频播放
+                break;
+
             case R.id.tv_media_util:
                 startActivity(new Intent(getApplicationContext(), MediaUtilActivity.class));
                 break;

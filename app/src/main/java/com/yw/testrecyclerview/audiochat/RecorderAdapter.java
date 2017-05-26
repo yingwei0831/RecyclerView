@@ -4,7 +4,6 @@ import android.app.Service;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yw.testrecyclerview.R;
-import com.yw.testrecyclerview.RecyclerViewSimpleAdapter;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 /**
  * Created by jiahe008_lvlanlan on 2017/5/25.
