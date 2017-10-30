@@ -153,7 +153,6 @@
             android:text="视频播放"
             android:textColor="@android:color/black" />
 
-
         <TextView
             android:id="@+id/tv_media_util"
             android:layout_width="match_parent"
@@ -164,6 +163,15 @@
             android:text="Media_截屏_录屏"
             android:textColor="@android:color/black" />
 
+        <TextView
+            android:id="@+id/tv_intent_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#03ab92"
+            android:padding="6dp"
+            android:text="IntentService"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 

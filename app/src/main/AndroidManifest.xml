@@ -74,7 +74,11 @@
         <activity android:name=".ui.Observer2Activity" />
         <activity android:name=".ui.MediaUtilActivity" />
         <activity android:name=".ui.AudioChatActivity" />
-        <activity android:name=".ui.VideoPlayActivity"></activity>
+        <activity android:name=".ui.VideoPlayActivity" />
+
+        <service android:name=".service.UploadImgService" />
+
+        <activity android:name=".viewindex.IndexableListActivity"></activity>
     </application>
 
 </manifest>

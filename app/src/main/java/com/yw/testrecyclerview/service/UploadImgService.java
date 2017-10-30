@@ -37,6 +37,8 @@ public class UploadImgService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        // 打印当前线程的id
+        Log.d("UploadImgService", "Thread id is " + Thread.currentThread(). getId());
         if (intent != null){
             String action = intent.getAction();
             if (ACTION_UPLOAD_IMG.equals(action)){

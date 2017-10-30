@@ -2,15 +2,19 @@ package com.yw.testrecyclerview;
 
 import android.annotation.TargetApi;
 import android.app.ActivityOptions;
+import android.app.IntentService;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.yw.testrecyclerview.mvp.DesignPatternActivity;
+import com.yw.testrecyclerview.service.UploadImgService;
 import com.yw.testrecyclerview.ui.AudioChatActivity;
+import com.yw.testrecyclerview.ui.IntentServiceActivity;
 import com.yw.testrecyclerview.ui.MediaUtilActivity;
 import com.yw.testrecyclerview.ui.MultiplePermissionActivity;
 import com.yw.testrecyclerview.ui.Observer2Activity;
@@ -52,6 +56,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.tv_wechat_audio).setOnClickListener(this);
         findViewById(R.id.tv_wechat_video).setOnClickListener(this);
         findViewById(R.id.tv_media_util).setOnClickListener(this);
+        findViewById(R.id.tv_intent_service).setOnClickListener(this);
         tvShareElement = (TextView) findViewById(R.id.tv_animation_view); //共享View
         tvShareElement.setOnClickListener(this);
     }
@@ -105,6 +110,13 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
             case R.id.tv_media_util:
                 startActivity(new Intent(getApplicationContext(), MediaUtilActivity.class));
                 break;
+            case R.id.tv_intent_service:
+                //开启Service
+                // 打印主线程的id
+                Log.d("MainActivity", "Thread id is " + Thread.currentThread().getId());
+                startActivity(new Intent(getApplicationContext(), IntentServiceActivity.class)); //广播接收器
+                break;
+
         }
     }
 
